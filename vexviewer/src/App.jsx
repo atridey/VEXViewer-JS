@@ -8,7 +8,7 @@ import Footer from "./components/Footer"
 
 export default function App() {
 
-  const baseURL = window.location.href
+  const baseURL = import.meta.env.DEV ? "http://localhost:8000" : window.location.href
 
   const [teamInfo, setTeamInfo] = useState(null)
   const [allEvents, setAllEvents] = useState(null)

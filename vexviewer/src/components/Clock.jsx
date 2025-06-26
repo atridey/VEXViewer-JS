@@ -8,6 +8,6 @@ export default function Clock(props) {
     }, []);
     
     return(
-        <h1 className="clock" style={props.isMobile ? {fontSize: '1.5rem'} : null}>{time.toLocaleTimeString('default', {hour12: false})}</h1>
+        <h1 className="clock" style={props.isMobile ? {fontSize: '1.3rem'} : null}>{time.toLocaleTimeString('default', {hour12: false})}</h1>
     )
 }
