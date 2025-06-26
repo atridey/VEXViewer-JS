@@ -9,7 +9,6 @@ import Footer from "./components/Footer"
 export default function App() {
 
   const baseURL = window.location.href
-  console.log(baseURL)
 
   const [teamInfo, setTeamInfo] = useState(null)
   const [allEvents, setAllEvents] = useState(null)
