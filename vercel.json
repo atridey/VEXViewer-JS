@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "express-backend/src/server.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["express-backend/package.json", "express-backend/node_modules/**"]
+      }
+    },
+    {
+      "src": "vexviewer/index.html",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "vexviewer/dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "express-backend/src/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "vexviewer/$1"
+    }
+  ],
+  "installCommand": "npm install --prefix vexviewer && npm install --prefix express-backend",
+  "buildCommand": "npm run build --prefix vexviewer"
+}

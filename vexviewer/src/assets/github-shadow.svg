@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="98" height="96" xmlns="http://www.w3.org/2000/svg" viewBox="1.429 13.452 120.355 113.127" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <filter id="drop-shadow-filter-0" bx:preset="drop-shadow 1 3 7 10 0.41 #00000083" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+      <feOffset dx="3" dy="7"/>
+      <feComponentTransfer result="offsetblur">
+        <feFuncA id="spread-ctrl" type="linear" slope="0.82"/>
+      </feComponentTransfer>
+      <feFlood flood-color="#00000083"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M 57.742 15.952 C 30.727 15.952 8.888 37.952 8.888 65.169 C 8.888 86.925 22.881 105.341 42.293 111.859 C 44.72 112.349 45.609 110.8 45.609 109.497 C 45.609 108.356 45.529 104.445 45.529 100.37 C 31.939 103.304 29.109 94.503 29.109 94.503 C 26.925 88.799 23.689 87.333 23.689 87.333 C 19.241 84.318 24.013 84.318 24.013 84.318 C 28.947 84.644 31.536 89.37 31.536 89.37 C 35.903 96.866 42.94 94.748 45.771 93.444 C 46.175 90.266 47.47 88.066 48.845 86.844 C 38.006 85.703 26.602 81.466 26.602 62.561 C 26.602 57.183 28.542 52.783 31.616 49.361 C 31.131 48.139 29.432 43.086 32.102 36.323 C 32.102 36.323 36.227 35.019 45.528 41.375 C 49.51 40.298 53.616 39.75 57.742 39.745 C 61.867 39.745 66.072 40.316 69.955 41.375 C 79.257 35.019 83.382 36.323 83.382 36.323 C 86.052 43.086 84.352 48.139 83.867 49.361 C 87.022 52.783 88.882 57.183 88.882 62.561 C 88.882 81.466 77.478 85.621 66.558 86.844 C 68.338 88.392 69.874 91.325 69.874 95.97 C 69.874 102.57 69.794 107.867 69.794 109.496 C 69.794 110.8 70.684 112.349 73.11 111.86 C 92.522 105.34 106.515 86.925 106.515 65.169 C 106.595 37.952 84.676 15.952 57.742 15.952 Z" fill="#fff" style="filter: url(&quot;#drop-shadow-filter-0&quot;);"/>
+</svg>
