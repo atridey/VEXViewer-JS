@@ -1,8 +1,5 @@
 #I just moved the vite gitignore out here i hope it works
-#My stuff
 .env
-__pycache__/
-venv/
 
 # Logs
 logs
