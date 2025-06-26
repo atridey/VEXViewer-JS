@@ -9,7 +9,7 @@ export default function Footer() {
                 <p>©2025 Atri Dey</p>
             </div>
             <div>
-                <a href="https://github.com/atridey" target="_blank">
+                <a href="https://github.com/atridey/VEXViewer-JS" target="_blank">
                     <img src={GithubLogo} />
                 </a>
             </div>
