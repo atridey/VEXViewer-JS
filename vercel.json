@@ -9,7 +9,7 @@
       }
     },
     {
-      "src": "vexviewer/index.html",
+      "src": "vexviewer/package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "vexviewer/dist"
