@@ -8,7 +8,7 @@ import Footer from "./components/Footer"
 
 export default function App() {
 
-  const baseURL = window.location.href
+  const baseURL = 'https://vexviewer.vercel.app'//window.location.href
 
   const [teamInfo, setTeamInfo] = useState(null)
   const [allEvents, setAllEvents] = useState(null)
@@ -32,14 +32,24 @@ export default function App() {
     setMatchList(await response.json())
   }
 
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth < 500) //event grid gets squished below this
+    onResize()
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  },
+  []
+  )
+  
   return (
     <>
-      <Header />
-      <main>
+      <Header isMobile={isMobile}/>
+      <main style={isMobile ? {paddingTop: '80px'} : null}>
         <TeamForm handleSubmit={handleSubmit} />
         {teamInfo!=null ? <InfoDisplay teamInfo={teamInfo} /> : null}
-        {allEvents!=null ? <EventGrid allEvents={allEvents} clickHandler={clickHandler} /> : null}
-        {(matchList!=null&&allEvents.length>0) ? <MatchTable matchList={matchList} teamNum={teamInfo.teamNum} /> : null}
+        {allEvents!=null ? <EventGrid allEvents={allEvents} clickHandler={clickHandler} isMobile={isMobile}/> : null}
+        {(matchList!=null&&allEvents.length>0) ? <MatchTable matchList={matchList} teamNum={teamInfo.teamNum} isMobile={isMobile}/> : null}
       </main>
       <Footer />
     </>

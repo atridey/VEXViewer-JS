@@ -47,6 +47,7 @@ header {
   text-shadow: 1px 2px 3px rgba(0, 0, 0, 100%);
   color: white;
   margin: 0px;
+  justify-self: end;
 }
 
 main {
@@ -143,9 +144,8 @@ form {
 }
 
 #compHeading {
-  margin-top: 25px;
+  margin-top: 15px;
   margin-left: 10px;
-  margin-right: 0px;
   margin-bottom: 5px;
   font-size: 1.75rem;
 }
@@ -156,7 +156,7 @@ table {
   padding: 10px;
   box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 50%);
   margin: 0px 10px 20px 10px;
-  width: calc(100% - (10px * 2)); /*AI code, should probably figure this out*/
+  width: calc(100vw - (20px * 2));
   border-spacing: 0px;
 }
 
@@ -204,4 +204,8 @@ a > img {
 }
 .blueScore {
   color: #6fa6c6;
+}
+
+#robotNameContainer, #locationContainer {
+  margin-left: 10px;
 }

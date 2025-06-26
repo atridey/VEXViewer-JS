@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-export default function Clock() {
+export default function Clock(props) {
     const [time, setTime] = useState(new Date());
     useEffect(() => {
         const interval = setInterval(() => setTime(new Date()), 1000);
@@ -8,6 +8,6 @@ export default function Clock() {
     }, []);
     
     return(
-        <h1 className="clock" style={{justifySelf: "end"}}>{time.toLocaleTimeString('default', {hour12: false})}</h1>
+        <h1 className="clock" style={props.isMobile ? {fontSize: '1.5rem'} : null}>{time.toLocaleTimeString('default', {hour12: false})}</h1>
     )
 }
