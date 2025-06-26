@@ -8,7 +8,7 @@ import Footer from "./components/Footer"
 
 export default function App() {
 
-  const baseURL = 'https://vexviewer.vercel.app'//window.location.href
+  const baseURL = window.location.href
 
   const [teamInfo, setTeamInfo] = useState(null)
   const [allEvents, setAllEvents] = useState(null)
