@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" id="layer" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="-127.045 63.251 602.795 462.126" style="enable-background:new -153 -46 652 652;" xmlns:bx="https://boxy-svg.com">
+<svg version="1.1" id="layer" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="-127.045 63.251 619.052 459.345" style="enable-background:new -153 -46 652 652;" xmlns:bx="https://boxy-svg.com">
   <defs>
     <filter id="drop-shadow-filter-0" bx:preset="drop-shadow 1 12 18 11 0.69 #00000076" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur in="SourceAlpha" stdDeviation="11"/>
