@@ -121,7 +121,7 @@ form {
   padding: 0px;
 }
 
-#matchGrid {
+#eventGrid {
   display: grid;
   grid-template: 1fr / 1fr 1fr 1fr;
   margin-bottom: 20px;

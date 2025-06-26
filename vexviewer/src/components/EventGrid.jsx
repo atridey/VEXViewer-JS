@@ -16,7 +16,7 @@ export default function MatchGrid(props) {
         props.allEvents.length>0
         ? <>
             <h1 id="compHeading">{year}-{year+1} Competitions:</h1>
-            <section id="matchGrid" ref={gridRef} style={props.isMobile ? {gridTemplate: "1fr / 1fr 1fr"} : null}>
+            <section id="eventGrid" ref={gridRef} style={props.isMobile ? {gridTemplate: "1fr / 1fr 1fr"} : null}>
                 {props.allEvents.map(thisEvent => <EventCard eventInfo={thisEvent} clickHandler={props.clickHandler} />)}
             </section>
         </>
