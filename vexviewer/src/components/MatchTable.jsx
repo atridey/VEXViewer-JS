@@ -8,19 +8,22 @@ export default function MatchTable(props) {
     [props.matchList] //should run just once initially
     )
 
+    const headerStyle = props.isMobile ? {fontSize: "0.7rem"} : null
+    const dataStyle = props.isMobile ? {fontSize: "0.6rem"} : null
+
     const rowList = []
     const formatTeam = (inputTeam) => (inputTeam==props.teamNum ? <u><b>{inputTeam}</b></u> : inputTeam)
     for (let i = 0; i < props.matchList.length; i++) {
         const thisMatch = props.matchList[i]
         const thisRow = (
             <tr>
-                <td>{thisMatch.name}</td>
-                <td>{thisMatch.scheduledTime}</td>
-                <td>{thisMatch.actualTime}</td>
-                <td>{thisMatch.field}</td>
-                <td>{formatTeam(thisMatch.redAlliance[0])}, {formatTeam(thisMatch.redAlliance[1])}</td>
-                <td><nobr className="redScore">{thisMatch.redScore}</nobr> - <nobr className="blueScore">{thisMatch.blueScore}</nobr></td>
-                <td>{formatTeam(thisMatch.blueAlliance[0])}, {formatTeam(thisMatch.blueAlliance[1])}</td>
+                <td style={dataStyle}>{thisMatch.name}</td>
+                <td style={dataStyle}>{thisMatch.scheduledTime}</td>
+                <td style={dataStyle}>{thisMatch.actualTime}</td>
+                <td style={dataStyle}>{thisMatch.field}</td>
+                <td style={dataStyle}>{formatTeam(thisMatch.redAlliance[0])}, {formatTeam(thisMatch.redAlliance[1])}</td>
+                <td style={dataStyle}><nobr className="redScore">{thisMatch.redScore}</nobr> - <nobr className="blueScore">{thisMatch.blueScore}</nobr></td>
+                <td style={dataStyle}>{formatTeam(thisMatch.blueAlliance[0])}, {formatTeam(thisMatch.blueAlliance[1])}</td>
             </tr>
         )          
         rowList.push(thisRow)
@@ -30,13 +33,13 @@ export default function MatchTable(props) {
         <table id="matchTable" ref={tableRef}>
             <thead>
                 <tr>
-                    <th>Match</th>
-                    <th>Scheduled Time</th>
-                    <th>Actual Time</th>
-                    <th>Field</th>
-                    <th>Red Alliance</th>
-                    <th>Score</th>
-                    <th>Blue Alliance</th>
+                    <th style={headerStyle}>Match</th>
+                    <th style={headerStyle}>Scheduled Time</th>
+                    <th style={headerStyle}>Actual Time</th>
+                    <th style={headerStyle}>Field</th>
+                    <th style={headerStyle}>Red Alliance</th>
+                    <th style={headerStyle}>Score</th>
+                    <th style={headerStyle}>Blue Alliance</th>
                 </tr>
             </thead>
 

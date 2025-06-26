@@ -10,7 +10,7 @@ export default function InfoDisplay(props) {
                         <h3>Team Name:</h3>
                         <p>{props.teamInfo.teamName}</p>
                     </div>
-                    <div>
+                    <div id="robotNameContainer">
                         <h3>Robot Name:</h3>
                         <p>{props.teamInfo.robotName}</p>
                     </div>
@@ -18,7 +18,7 @@ export default function InfoDisplay(props) {
                         <h3>School:</h3>
                         <p>{props.teamInfo.school}</p>
                     </div>
-                    <div>
+                    <div id="locationContainer">
                         <h3>Location:</h3>
                         <p>{props.teamInfo.location}</p>
                     </div>
