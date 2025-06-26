@@ -12,7 +12,7 @@
       "src": "vexviewer/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "vexviewer/dist"
+        "distDir": "dist"
       }
     }
   ],
